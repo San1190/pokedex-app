@@ -1,0 +1,48 @@
+<div class="pokemon-card" (click)="onCardClick()">
+  <!-- 👇 LOADING state -->
+  @if (loading) {
+    <div class="loading">
+      <p>Cargando {{ pokemon.name }}...</p>
+    </div>
+  }
+
+  <!-- 👇 ERROR state -->
+  @if (error) {
+    <div class="error">
+      <p>{{ error }}</p>
+      <button (click)="loadPokemonDetail()">Reintentar</button>
+    </div>
+  }
+
+  <!-- 👇 SUCCESS state con detalles -->
+  @if (pokemonDetail && !loading && !error) {
+    <div class="pokemon-header">
+      <h3>{{ pokemonDetail.name | titlecase }}</h3>
+      <span class="pokemon-id">#{{ pokemonDetail.id.toString().padStart(3, '0') }}</span>
+    </div>
+
+    <div class="pokemon-image">
+      <img
+        [src]="pokemonDetail.sprites.other['official-artwork'].front_default || pokemonDetail.sprites.front_default"
+        [alt]="pokemonDetail.name"
+        (error)="onImageError($event)"
+      >
+    </div>
+
+    <div class="pokemon-info">
+      <div class="pokemon-stats">
+        <span><strong>Altura:</strong> {{ pokemonDetail.height / 10 }}m</span>
+        <span><strong>Peso:</strong> {{ pokemonDetail.weight / 10 }}kg</span>
+      </div>
+
+      <div class="pokemon-types">
+        <strong>Tipos:</strong>
+        @for (type of pokemonDetail.types; track type.type.name) {
+          <span class="type-badge" [class]="'type-' + type.type.name">
+            {{ type.type.name | titlecase }}
+          </span>
+        }
+      </div>
+    </div>
+  }
+</div>
