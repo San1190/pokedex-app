@@ -1,59 +1,68 @@
-# PokedexApp
+# Pokegular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Pokegular is a modern Angular application that brings the world of Pokémon to your browser! 🚀
 
-## Development server
+Explore, search, and discover Pokémon using data from the [PokeAPI](https://pokeapi.co/). This project is perfect for Pokémon fans and developers looking to learn Angular with a fun, real-world example.
 
-To start a local development server, run:
+## Features
+
+- ⚡ Browse a list of Pokémon with official artwork
+- 🔍 View detailed stats, types, and images for each Pokémon
+- 🕹️ Fast, responsive, and mobile-friendly UI
+- 🛠️ Built with Angular, RxJS, and modern best practices
+
+## Screenshots
+
+> _Add your app screenshots here!_
+
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16+ recommended)
+- [Angular CLI](https://angular.io/cli)
+
+### Installation
 
 ```bash
+# Clone the repository
+https://github.com/your-username/pokegular.git
+cd pokegular/pokedex-app
+
+# Install dependencies
+npm install
+
+# Run the development server
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Visit `http://localhost:4200` in your browser to see the app in action!
 
-## Code scaffolding
+## Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+pokedex-app/
+  ├── src/
+  │   ├── app/
+  │   │   ├── components/         # Reusable UI components
+  │   │   ├── services/           # API and data services
+  │   │   └── ...
+  │   ├── assets/                 # Static assets
+  │   └── styles.scss             # Global styles
+  ├── angular.json                # Angular project config
+  └── ...
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## API
+This app uses the free [PokeAPI](https://pokeapi.co/) to fetch Pokémon data.
 
-```bash
-ng generate --help
-```
+## Contributing
 
-## Building
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-To build the project run:
+## License
 
-```bash
-ng build
-```
+[MIT](LICENSE)
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Made with ❤️ for Pokémon fans and Angular developers!
